@@ -54,6 +54,7 @@ const modules = [
     description: "גישה ישירה לפלטפורמת סקודואל. לחץ לפתיחה בלשונית חדשה.",
     href: "https://web-production-646d7.up.railway.app",
     external: true,
+    status: "Live",
     accentColor: "#8b5cf6",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} className="w-6 h-6">
