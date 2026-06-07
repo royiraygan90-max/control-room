@@ -5,7 +5,9 @@ const modules = [
     title: "יומן מסחר",
     subtitle: "Trading Journal",
     description: "תיעוד וניתוח עסקאות מסחר, מעקב אחר ביצועים ולמידה מהיסטוריית המסחר שלך.",
-    href: "/trading",
+    href: "https://trading-journal-production-d21e.up.railway.app",
+    external: true,
+    status: "Live",
     accentColor: "#22c55e",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} className="w-6 h-6">

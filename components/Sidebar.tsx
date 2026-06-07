@@ -7,7 +7,8 @@ const navItems = [
   {
     label: "יומן מסחר",
     sublabel: "Trading Journal",
-    href: "/trading",
+    href: "https://trading-journal-production-d21e.up.railway.app",
+    external: true,
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} className="w-5 h-5">
         <path strokeLinecap="round" strokeLinejoin="round" d="M3 3v18h18" />
