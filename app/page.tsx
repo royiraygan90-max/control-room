@@ -74,6 +74,16 @@ const modules = [
     accentColor: "#6366f1",
     icon: (<span>🧠</span>),
   },
+  {
+    title: "תזרים חודשי",
+    subtitle: "Cash Flow",
+    description: "מעקב הכנסות והוצאות חודשי עם גרפים, KPI ורשימת עסקאות",
+    href: "https://cash-flow-production.up.railway.app",
+    external: true,
+    status: "Live",
+    accentColor: "#10b981",
+    icon: (<span>💰</span>),
+  },
 ];
 
 export default function HomePage() {

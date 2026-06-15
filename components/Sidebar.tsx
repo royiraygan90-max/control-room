@@ -66,6 +66,13 @@ const navItems = [
     external: true,
     icon: (<span>🧠</span>),
   },
+  {
+    label: "תזרים חודשי",
+    sublabel: "Cash Flow",
+    href: "https://cash-flow-production.up.railway.app",
+    external: true,
+    icon: (<span>💰</span>),
+  },
 ];
 
 export default function Sidebar() {
