@@ -87,7 +87,7 @@ export default function HomePage() {
       {/* Quick Stats Bar */}
       <div className="grid grid-cols-3 gap-4 mb-10">
         {[
-          { label: "מודולים פעילים", value: "0 / 6" },
+          { label: "מודולים פעילים", value: "5 / 6" },
           { label: "אימונים השבוע", value: "—" },
           { label: "עסקאות החודש", value: "—" },
         ].map((stat) => (
