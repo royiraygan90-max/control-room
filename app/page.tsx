@@ -64,6 +64,16 @@ const modules = [
       </svg>
     ),
   },
+  {
+    title: "דיילי OS",
+    subtitle: "Daily OS",
+    description: "מערכת ניהול יום אישית עם גיימיפיקציה, הרגלים, משימות, מטרות ו-XP",
+    href: "https://daily-os-production-f513.up.railway.app",
+    external: true,
+    status: "Live",
+    accentColor: "#6366f1",
+    icon: (<span>🧠</span>),
+  },
 ];
 
 export default function HomePage() {

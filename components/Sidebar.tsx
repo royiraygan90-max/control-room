@@ -59,6 +59,13 @@ const navItems = [
       </svg>
     ),
   },
+  {
+    label: "דיילי OS",
+    sublabel: "Daily OS",
+    href: "https://daily-os-production-f513.up.railway.app",
+    external: true,
+    icon: (<span>🧠</span>),
+  },
 ];
 
 export default function Sidebar() {
