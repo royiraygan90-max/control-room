@@ -78,7 +78,7 @@ const modules = [
     title: "תזרים חודשי",
     subtitle: "Cash Flow",
     description: "מעקב הכנסות והוצאות חודשי עם גרפים, KPI ורשימת עסקאות",
-    href: "https://cash-flow-production.up.railway.app",
+    href: "https://cash-flow-production-5836.up.railway.app",
     external: true,
     status: "Live",
     accentColor: "#10b981",

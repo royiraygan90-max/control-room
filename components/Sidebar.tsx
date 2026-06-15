@@ -69,7 +69,7 @@ const navItems = [
   {
     label: "תזרים חודשי",
     sublabel: "Cash Flow",
-    href: "https://cash-flow-production.up.railway.app",
+    href: "https://cash-flow-production-5836.up.railway.app",
     external: true,
     icon: (<span>💰</span>),
   },
