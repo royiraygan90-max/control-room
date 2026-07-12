@@ -20,7 +20,9 @@ const modules = [
     title: "תיקי השקעות",
     subtitle: "Investment Portfolio Manager",
     description: "ניהול תיקי השקעות, מעקב אחר נכסים, תשואות וחשיפה לשוק בזמן אמת.",
-    href: "/portfolio",
+    href: "https://portfolio-dashboard-production-5dc3.up.railway.app",
+    external: true,
+    status: "Live",
     accentColor: "#6366f1",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} className="w-6 h-6">
@@ -87,7 +89,7 @@ export default function HomePage() {
       {/* Quick Stats Bar */}
       <div className="grid grid-cols-3 gap-4 mb-10">
         {[
-          { label: "מודולים פעילים", value: "5 / 6" },
+          { label: "מודולים פעילים", value: "6 / 6" },
           { label: "אימונים השבוע", value: "—" },
           { label: "עסקאות החודש", value: "—" },
         ].map((stat) => (
