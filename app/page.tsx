@@ -1,119 +1,168 @@
+"use client";
+
+import { useEffect, useMemo, useRef, useState } from "react";
 import ModuleCard from "@/components/ModuleCard";
 
 const modules = [
   {
+    index: 1,
     title: "יומן מסחר",
-    subtitle: "Trading Journal",
-    description: "תיעוד וניתוח עסקאות מסחר, מעקב אחר ביצועים ולמידה מהיסטוריית המסחר שלך.",
     href: "https://trading-journal-production-d21e.up.railway.app",
-    external: true,
-    status: "Live",
-    accentColor: "#22c55e",
+    accentColor: "oklch(72% 0.15 155)",
     icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} className="w-6 h-6">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M3 3v18h18" />
-        <path strokeLinecap="round" strokeLinejoin="round" d="m7 16 4-4 4 4 4-4" />
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round" className="w-full h-full">
+        <polyline points="3,16 9,10 13,14 21,5" />
+        <polyline points="15,5 21,5 21,11" />
       </svg>
     ),
   },
   {
+    index: 2,
     title: "תיקי השקעות",
-    subtitle: "Investment Portfolio Manager",
-    description: "ניהול תיקי השקעות, מעקב אחר נכסים, תשואות וחשיפה לשוק בזמן אמת.",
     href: "https://portfolio-dashboard-production-5dc3.up.railway.app",
-    external: true,
-    status: "Live",
-    accentColor: "#6366f1",
+    accentColor: "oklch(68% 0.14 250)",
     icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} className="w-6 h-6">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M20.25 6.375c0 2.278-3.694 4.125-8.25 4.125S3.75 8.653 3.75 6.375m16.5 0c0-2.278-3.694-4.125-8.25-4.125S3.75 4.097 3.75 6.375m16.5 0v11.25c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125V6.375m16.5 5.625c0 2.278-3.694 4.125-8.25 4.125s-8.25-1.847-8.25-4.125" />
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round" className="w-full h-full">
+        <polygon points="12,3 21,8 12,13 3,8" />
+        <polyline points="3,13 12,18 21,13" />
+        <polyline points="3,18.5 12,23 21,18.5" />
       </svg>
     ),
   },
   {
+    index: 3,
     title: "כושר",
-    subtitle: "Fitness Tracker",
-    description: "Live workout mode, activity heatmap, workout history",
     href: "https://web-production-86d20.up.railway.app",
-    external: true,
-    status: "Live",
-    accentColor: "#22c55e",
-    icon: <span className="text-xl">💪</span>,
-  },
-  {
-    title: "סקודואל",
-    subtitle: "Scuduel — External",
-    description: "גישה ישירה לפלטפורמת סקודואל. לחץ לפתיחה בלשונית חדשה.",
-    href: "https://web-production-646d7.up.railway.app",
-    external: true,
-    status: "Live",
-    accentColor: "#8b5cf6",
+    accentColor: "oklch(75% 0.13 190)",
     icon: (
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} className="w-6 h-6">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M13.5 6H5.25A2.25 2.25 0 0 0 3 8.25v10.5A2.25 2.25 0 0 0 5.25 21h10.5A2.25 2.25 0 0 0 18 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round" className="w-full h-full">
+        <polyline points="2,13 7,13 9,7 13,19 16,13 22,13" />
       </svg>
     ),
   },
   {
-    title: "דיילי OS",
-    subtitle: "Daily OS",
-    description: "מערכת ניהול יום אישית עם גיימיפיקציה, הרגלים, משימות, מטרות ו-XP",
-    href: "https://daily-os-production-f513.up.railway.app",
-    external: true,
-    status: "Live",
-    accentColor: "#6366f1",
-    icon: (<span>🧠</span>),
+    index: 4,
+    title: "סקודואל",
+    href: "https://web-production-646d7.up.railway.app",
+    accentColor: "oklch(68% 0.17 300)",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round" className="w-full h-full">
+        <line x1="7" y1="17" x2="17" y2="7" />
+        <polyline points="8,7 17,7 17,16" />
+      </svg>
+    ),
   },
   {
+    index: 5,
+    title: "דיילי OS",
+    href: "https://daily-os-production-f513.up.railway.app",
+    accentColor: "oklch(72% 0.17 350)",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round" className="w-full h-full">
+        <path d="M12 2v6M12 16v6M2 12h6M16 12h6M5.3 5.3l4.2 4.2M14.5 14.5l4.2 4.2M18.7 5.3l-4.2 4.2M9.5 14.5l-4.2 4.2" />
+      </svg>
+    ),
+  },
+  {
+    index: 6,
     title: "תזרים חודשי",
-    subtitle: "Cash Flow",
-    description: "מעקב הכנסות והוצאות חודשי עם גרפים, KPI ורשימת עסקאות",
     href: "https://cash-flow-production-5836.up.railway.app",
-    external: true,
-    status: "Live",
-    accentColor: "#10b981",
-    icon: (<span>💰</span>),
+    accentColor: "oklch(78% 0.15 75)",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round" className="w-full h-full">
+        <rect x="2.5" y="6" width="19" height="13" rx="2.5" />
+        <path d="M2.5 10h19" />
+        <circle cx="16.5" cy="14.5" r="1.1" />
+      </svg>
+    ),
   },
 ];
 
-export default function HomePage() {
+function SearchIcon() {
   return (
-    <div className="p-8">
-      {/* Page Header */}
-      <div className="mb-10">
-        <p className="text-sm text-[var(--muted)] mb-1">ברוך הבא</p>
-        <h1 className="text-3xl font-bold text-[var(--foreground)]">Control Room</h1>
-        <p className="text-[var(--muted)] mt-1 text-base">לוח הבקרה האישי שלך</p>
-      </div>
+    <svg
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth={1.8}
+      strokeLinecap="round"
+      strokeLinejoin="round"
+      className="w-[14px] h-[14px] text-[var(--muted-dim)] shrink-0"
+    >
+      <circle cx="11" cy="11" r="7" />
+      <line x1="21" y1="21" x2="16.65" y2="16.65" />
+    </svg>
+  );
+}
 
-      {/* Quick Stats Bar */}
-      <div className="grid grid-cols-3 gap-4 mb-10">
-        {[
-          { label: "מודולים פעילים", value: "6 / 6" },
-          { label: "אימונים השבוע", value: "—" },
-          { label: "עסקאות החודש", value: "—" },
-        ].map((stat) => (
-          <div
-            key={stat.label}
-            className="rounded-xl border border-[var(--border)] bg-[var(--surface)] px-5 py-4"
-          >
-            <p className="text-xs text-[var(--muted)] mb-1">{stat.label}</p>
-            <p className="text-xl font-semibold text-[var(--foreground)]">{stat.value}</p>
+export default function HomePage() {
+  const [query, setQuery] = useState("");
+  const searchRef = useRef<HTMLInputElement>(null);
+
+  useEffect(() => {
+    function onKeyDown(e: KeyboardEvent) {
+      if ((e.metaKey || e.ctrlKey) && e.key.toLowerCase() === "k") {
+        e.preventDefault();
+        searchRef.current?.focus();
+      }
+    }
+    window.addEventListener("keydown", onKeyDown);
+    return () => window.removeEventListener("keydown", onKeyDown);
+  }, []);
+
+  const filtered = useMemo(() => {
+    const q = query.trim().toLowerCase();
+    if (!q) return modules;
+    return modules.filter((m) => m.title.toLowerCase().includes(q));
+  }, [query]);
+
+  return (
+    <div className="min-h-full flex flex-col">
+      {/* Top bar */}
+      <header className="h-[52px] sm:h-[72px] px-4 sm:px-10 flex items-center justify-center sm:justify-between border-b border-[var(--border)] shrink-0">
+        <div className="hidden sm:flex items-center gap-2.5">
+          <div className="w-7 h-7 rounded-[9px] bg-[var(--accent)] flex items-center justify-center shrink-0">
+            <svg viewBox="0 0 12 12" fill="white" className="w-[11px] h-[11px]">
+              <polygon points="2,1 11,6 2,11" />
+            </svg>
           </div>
-        ))}
+          <span className="text-xs font-semibold tracking-[.08em] text-[var(--muted)]">CONTROL ROOM</span>
+        </div>
+        <span className="sm:hidden text-[11px] font-semibold tracking-[.08em] text-[var(--muted)]">CONTROL ROOM</span>
+        <div className="hidden sm:flex items-center gap-2 w-[220px] h-[34px] rounded-full border border-[var(--border)] bg-[var(--surface)] px-3.5">
+          <SearchIcon />
+          <input
+            ref={searchRef}
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            placeholder="חיפוש מודולים..."
+            className="flex-1 min-w-0 bg-transparent text-[12.5px] text-[var(--foreground)] placeholder:text-[var(--muted-dim)] outline-none"
+          />
+          <span className="text-[10px] font-medium text-[var(--muted-dim)] shrink-0">⌘K</span>
+        </div>
+      </header>
+
+      {/* Mobile search row */}
+      <div className="sm:hidden mx-4 mt-4 h-10 rounded-xl border border-[var(--border)] bg-[var(--surface)] flex items-center gap-2 px-3.5 shrink-0">
+        <SearchIcon />
+        <input
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          placeholder="חיפוש..."
+          className="flex-1 min-w-0 bg-transparent text-[13px] text-[var(--foreground)] placeholder:text-[var(--muted-dim)] outline-none"
+        />
       </div>
 
-      {/* Section Title */}
-      <div className="flex items-center gap-3 mb-6">
-        <h2 className="text-sm font-medium text-[var(--muted)] uppercase tracking-wider">מודולים</h2>
-        <div className="flex-1 h-px bg-[var(--border)]" />
-      </div>
-
-      {/* Module Cards Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-        {modules.map((mod) => (
+      {/* Module grid */}
+      <div className="flex-1 p-4 sm:p-10 grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-5 content-start">
+        {filtered.map((mod) => (
           <ModuleCard key={mod.href} {...mod} />
         ))}
+        {filtered.length === 0 && (
+          <p className="col-span-full text-center text-[var(--muted)] text-sm py-10">
+            לא נמצאו מודולים
+          </p>
+        )}
       </div>
     </div>
   );
