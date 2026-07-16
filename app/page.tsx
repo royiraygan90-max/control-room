@@ -6,7 +6,7 @@ import ModuleCard from "@/components/ModuleCard";
 const modules = [
   {
     index: 1,
-    title: "יומן מסחר",
+    title: "Trading Journal",
     href: "https://trading-journal-production-d21e.up.railway.app",
     accentColor: "oklch(72% 0.15 155)",
     icon: (
@@ -18,7 +18,7 @@ const modules = [
   },
   {
     index: 2,
-    title: "תיקי השקעות",
+    title: "Portfolio Manager",
     href: "https://portfolio-dashboard-production-5dc3.up.railway.app",
     accentColor: "oklch(68% 0.14 250)",
     icon: (
@@ -31,7 +31,7 @@ const modules = [
   },
   {
     index: 3,
-    title: "כושר",
+    title: "Fitness Tracker",
     href: "https://web-production-86d20.up.railway.app",
     accentColor: "oklch(75% 0.13 190)",
     icon: (
@@ -42,7 +42,7 @@ const modules = [
   },
   {
     index: 4,
-    title: "סקודואל",
+    title: "Scuduel",
     href: "https://web-production-646d7.up.railway.app",
     accentColor: "oklch(68% 0.17 300)",
     icon: (
@@ -54,7 +54,7 @@ const modules = [
   },
   {
     index: 5,
-    title: "דיילי OS",
+    title: "Daily OS",
     href: "https://daily-os-production-f513.up.railway.app",
     accentColor: "oklch(72% 0.17 350)",
     icon: (
@@ -65,7 +65,7 @@ const modules = [
   },
   {
     index: 6,
-    title: "תזרים חודשי",
+    title: "Cash Flow",
     href: "https://cash-flow-production-5836.up.railway.app",
     accentColor: "oklch(78% 0.15 75)",
     icon: (
@@ -135,7 +135,7 @@ export default function HomePage() {
             ref={searchRef}
             value={query}
             onChange={(e) => setQuery(e.target.value)}
-            placeholder="חיפוש מודולים..."
+            placeholder="Search modules..."
             className="flex-1 min-w-0 bg-transparent text-[12.5px] text-[var(--foreground)] placeholder:text-[var(--muted-dim)] outline-none"
           />
           <span className="text-[10px] font-medium text-[var(--muted-dim)] shrink-0">⌘K</span>
@@ -148,7 +148,7 @@ export default function HomePage() {
         <input
           value={query}
           onChange={(e) => setQuery(e.target.value)}
-          placeholder="חיפוש..."
+          placeholder="Search..."
           className="flex-1 min-w-0 bg-transparent text-[13px] text-[var(--foreground)] placeholder:text-[var(--muted-dim)] outline-none"
         />
       </div>
@@ -160,7 +160,7 @@ export default function HomePage() {
         ))}
         {filtered.length === 0 && (
           <p className="col-span-full text-center text-[var(--muted)] text-sm py-10">
-            לא נמצאו מודולים
+            No modules found
           </p>
         )}
       </div>

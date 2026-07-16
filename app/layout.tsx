@@ -10,7 +10,7 @@ const spaceGrotesk = Space_Grotesk({
 
 export const metadata: Metadata = {
   title: "Control Room",
-  description: "לוח בקרה אישי",
+  description: "Your personal control panel",
 };
 
 export default function RootLayout({
@@ -19,7 +19,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="he" dir="rtl" className={`${spaceGrotesk.variable} h-full`}>
+    <html lang="en" dir="ltr" className={`${spaceGrotesk.variable} h-full`}>
       <body className="h-full antialiased bg-[var(--background)]">
         {children}
       </body>

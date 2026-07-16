@@ -3,8 +3,8 @@ import PageShell from "@/components/PageShell";
 export default function PortfolioPage() {
   return (
     <PageShell
-      title="תיקי השקעות"
-      subtitle="Investment Portfolio Manager"
+      title="Portfolio Manager"
+      subtitle="Holdings, returns & real-time market exposure"
       accentColor="#6366f1"
       icon={
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} className="w-6 h-6">

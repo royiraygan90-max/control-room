@@ -3,8 +3,8 @@ import PageShell from "@/components/PageShell";
 export default function TradingPage() {
   return (
     <PageShell
-      title="יומן מסחר"
-      subtitle="Trading Journal"
+      title="Trading Journal"
+      subtitle="Trade logging, performance tracking & analysis"
       accentColor="#22c55e"
       icon={
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} className="w-6 h-6">
