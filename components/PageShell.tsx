@@ -32,9 +32,9 @@ export default function PageShell({ title, subtitle, accentColor, icon }: PageSh
         >
           <span style={{ color: accentColor }}>{icon}</span>
         </div>
-        <h2 className="text-lg font-semibold text-[var(--foreground)] mb-2">בקרוב</h2>
+        <h2 className="text-lg font-semibold text-[var(--foreground)] mb-2">Coming Soon</h2>
         <p className="text-sm text-[var(--muted)] max-w-sm leading-relaxed">
-          מודול זה נמצא בפיתוח. התכנים והפונקציונליות יתווספו בשלב הבא.
+          This module is under development. Content and functionality will be added soon.
         </p>
         <div
           className="mt-6 px-4 py-1.5 rounded-full text-xs font-medium"

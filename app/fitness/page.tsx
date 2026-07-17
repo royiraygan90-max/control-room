@@ -3,8 +3,8 @@ import PageShell from "@/components/PageShell";
 export default function FitnessPage() {
   return (
     <PageShell
-      title="כושר"
-      subtitle="Fitness Tracker"
+      title="Fitness Tracker"
+      subtitle="Live workout mode, activity heatmap & history"
       accentColor="#ef4444"
       icon={
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} className="w-6 h-6">

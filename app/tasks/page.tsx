@@ -3,8 +3,8 @@ import PageShell from "@/components/PageShell";
 export default function TasksPage() {
   return (
     <PageShell
-      title="משימות יומיות"
-      subtitle="Daily Tasks & Morning Routine"
+      title="Daily Tasks"
+      subtitle="Daily task management & morning routine"
       accentColor="#f59e0b"
       icon={
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.75} className="w-6 h-6">
