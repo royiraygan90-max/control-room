@@ -66,7 +66,7 @@ const modules = [
   {
     index: 6,
     title: "Cash Flow",
-    href: "https://cash-flow-production-5836.up.railway.app",
+    href: "/go/cashflow",
     accentColor: "oklch(78% 0.15 75)",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round" className="w-full h-full">
