@@ -79,7 +79,7 @@ const modules = [
   {
     index: 7,
     title: "Home Hub",
-    href: "https://home-hub-web-production.up.railway.app",
+    href: "/go/home-hub",
     accentColor: "oklch(66% 0.11 20)",
     icon: (
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round" className="w-full h-full">
