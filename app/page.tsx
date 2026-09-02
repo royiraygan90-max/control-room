@@ -76,6 +76,17 @@ const modules = [
       </svg>
     ),
   },
+  {
+    index: 7,
+    title: "Home Hub",
+    href: "https://home-hub-web-production.up.railway.app",
+    accentColor: "oklch(66% 0.11 20)",
+    icon: (
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={1.8} strokeLinecap="round" strokeLinejoin="round" className="w-full h-full">
+        <path d="M4 10l8-6 8 6v9a1 1 0 01-1 1h-4v-6H9v6H5a1 1 0 01-1-1v-9z" />
+      </svg>
+    ),
+  },
 ];
 
 function SearchIcon() {
