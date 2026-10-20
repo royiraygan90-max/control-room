@@ -30,6 +30,22 @@ body {
   direction: ltr;
 }
 
+body {
+  overscroll-behavior-y: none;
+}
+
+.app-shell {
+  height: 100%;
+  padding-top: env(safe-area-inset-top);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+input,
+select,
+textarea {
+  font-size: 16px;
+}
+
 ::-webkit-scrollbar {
   width: 6px;
 }
